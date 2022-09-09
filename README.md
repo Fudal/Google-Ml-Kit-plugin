@@ -1,138 +1,71 @@
-# Google's ML Kit for Flutter
+# Google's ML Kit Face Detection for Flutter
 
-Google's ML Kit for Flutter is a set of [Flutter plugins](https://flutter.io/platform-plugins/) that enable [Flutter](https://flutter.dev) apps to use [Google's standalone ML Kit](https://developers.google.com/ml-kit).
+[![Pub Version](https://img.shields.io/pub/v/google_mlkit_face_detection)](https://pub.dev/packages/google_mlkit_face_detection)
+[![analysis](https://github.com/bharat-biradar/Google-Ml-Kit-plugin/actions/workflows/flutter.yml/badge.svg)](https://github.com/bharat-biradar/Google-Ml-Kit-plugin/actions)
+[![Star on Github](https://img.shields.io/github/stars/bharat-biradar/Google-Ml-Kit-plugin.svg?style=flat&logo=github&colorB=deeppink&label=stars)](https://github.com/bharat-biradar/Google-Ml-Kit-plugin)
+[![License: MIT](https://img.shields.io/badge/license-MIT-purple.svg)](https://opensource.org/licenses/MIT)
 
-## Features
+A Flutter plugin to use [Google's ML Kit Face Detection](https://developers.google.com/ml-kit/vision/face-detection) to detect faces in an image, identify key facial features, and get the contours of detected faces.
 
-### Vision APIs
+## Getting Started
 
-| Feature                                                                                       | Plugin | Source Code| Android | iOS |
-|-----------------------------------------------------------------------------------------------|--------|------------|---------|-----|
-|[Barcode Scanning](https://developers.google.com/ml-kit/vision/barcode-scanning)               | [google\_mlkit\_barcode\_scanning](https://pub.dev/packages/google_mlkit_barcode_scanning) [![Pub Version](https://img.shields.io/pub/v/google_mlkit_barcode_scanning)](https://pub.dev/packages/google_mlkit_barcode_scanning)                                | [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/bharat-biradar/Google-Ml-Kit-plugin/tree/master/packages/google_mlkit_barcode_scanning)           | ✅ | ✅ |
-|[Face Detection](https://developers.google.com/ml-kit/vision/face-detection)                   | [google\_mlkit\_face\_detection](https://pub.dev/packages/google_mlkit_face_detection) [![Pub Version](https://img.shields.io/pub/v/google_mlkit_face_detection)](https://pub.dev/packages/google_mlkit_face_detection)                                        | [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/bharat-biradar/Google-Ml-Kit-plugin/tree/master/packages/google_mlkit_face_detection)             | ✅ | ✅ |
-|[Image Labeling](https://developers.google.com/ml-kit/vision/image-labeling)                   | [google\_mlkit\_image\_labeling](https://pub.dev/packages/google_mlkit_image_labeling) [![Pub Version](https://img.shields.io/pub/v/google_mlkit_image_labeling)](https://pub.dev/packages/google_mlkit_image_labeling)                                        | [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/bharat-biradar/Google-Ml-Kit-plugin/tree/master/packages/google_mlkit_image_labeling)             | ✅ | ✅ |
-|[Object Detection and Tracking](https://developers.google.com/ml-kit/vision/object-detection)  | [google\_mlkit\_object\_detection](https://pub.dev/packages/google_mlkit_object_detection) [![Pub Version](https://img.shields.io/pub/v/google_mlkit_object_detection)](https://pub.dev/packages/google_mlkit_object_detection)                                | [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/bharat-biradar/Google-Ml-Kit-plugin/tree/master/packages/google_mlkit_object_detection)           | ✅ | ✅ |
-|[Text Recognition](https://developers.google.com/ml-kit/vision/text-recognition)               | [google\_mlkit\_text\_recognition](https://pub.dev/packages/google_mlkit_text_recognition) [![Pub Version](https://img.shields.io/pub/v/google_mlkit_text_recognition)](https://pub.dev/packages/google_mlkit_text_recognition)                                | [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/bharat-biradar/Google-Ml-Kit-plugin/tree/master/packages/google_mlkit_text_recognition)           | ✅ | ✅ |
-|[Text Recognition V2](https://developers.google.com/ml-kit/vision/text-recognition/v2)         | [google\_mlkit\_text\_recognition](https://pub.dev/packages/google_mlkit_text_recognition) [![Pub Version](https://img.shields.io/pub/v/google_mlkit_text_recognition)](https://pub.dev/packages/google_mlkit_text_recognition)                                | [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/bharat-biradar/Google-Ml-Kit-plugin/tree/master/packages/google_mlkit_text_recognition)           | ✅ | ✅ |
-|[Digital Ink Recognition](https://developers.google.com/ml-kit/vision/digital-ink-recognition) | [google\_mlkit\_digital\_ink\_recognition](https://pub.dev/packages/google_mlkit_digital_ink_recognition) [![Pub Version](https://img.shields.io/pub/v/google_mlkit_digital_ink_recognition)](https://pub.dev/packages/google_mlkit_digital_ink_recognition)   | [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/bharat-biradar/Google-Ml-Kit-plugin/tree/master/packages/google_mlkit_digital_ink_recognition)    | ✅ | ✅ |
-|[Pose Detection](https://developers.google.com/ml-kit/vision/pose-detection)                   | [google\_mlkit\_pose\_detection](https://pub.dev/packages/google_mlkit_pose_detection) [![Pub Version](https://img.shields.io/pub/v/google_mlkit_pose_detection)](https://pub.dev/packages/google_mlkit_pose_detection)                                        | [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/bharat-biradar/Google-Ml-Kit-plugin/tree/master/packages/google_mlkit_pose_detection)             | ✅ | ✅ |
-|[Selfie Segmentation](https://developers.google.com/ml-kit/vision/selfie-segmentation)         | [google\_mlkit\_selfie\_segmentation](https://pub.dev/packages/google_mlkit_selfie_segmentation) [![Pub Version](https://img.shields.io/pub/v/google_mlkit_selfie_segmentation)](https://pub.dev/packages/google_mlkit_selfie_segmentation)                    | [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/bharat-biradar/Google-Ml-Kit-plugin/tree/master/packages/google_mlkit_selfie_segmentation)        | ✅ | ✅ |
+Before you get started read about the requirements and known issues of this plugin [here](https://github.com/bharat-biradar/Google-Ml-Kit-plugin#requirements).
 
-### Natural Language APIs
+## Usage
 
-| Feature                                                                                       | Plugin | Source Code| Android | iOS |
-|-----------------------------------------------------------------------------------------------|--------|------------|---------|-----|
-|[Language Identification](https://developers.google.com/ml-kit/language/identification)        | [google\_mlkit\_language\_id](https://pub.dev/packages/google_mlkit_language_id) [![Pub Version](https://img.shields.io/pub/v/google_mlkit_language_id)](https://pub.dev/packages/google_mlkit_language_id)                                                    | [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/bharat-biradar/Google-Ml-Kit-plugin/tree/master/packages/google_mlkit_language_id)                | ✅ | ✅ |
-|[On-Device Translation](https://developers.google.com/ml-kit/language/translation)             | [google\_mlkit\_translation](https://pub.dev/packages/google_mlkit_translation) [![Pub Version](https://img.shields.io/pub/v/google_mlkit_translation)](https://pub.dev/packages/google_mlkit_translation)                                                     | [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/bharat-biradar/Google-Ml-Kit-plugin/tree/master/packages/google_mlkit_translation)                | ✅ | ✅ |
-|[Smart Reply](https://developers.google.com/ml-kit/language/smart-reply)                       | [google\_mlkit\_smart\_reply](https://pub.dev/packages/google_mlkit_smart_reply) [![Pub Version](https://img.shields.io/pub/v/google_mlkit_smart_reply)](https://pub.dev/packages/google_mlkit_smart_reply)                                                    | [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/bharat-biradar/Google-Ml-Kit-plugin/tree/master/packages/google_mlkit_smart_reply)                | ✅ | ✅ |
-|[Entity Extraction](https://developers.google.com/ml-kit/language/entity-extraction)           | [google\_mlkit\_entity\_extraction](https://pub.dev/packages/google_mlkit_entity_extraction) [![Pub Version](https://img.shields.io/pub/v/google_mlkit_entity_extraction)](https://pub.dev/packages/google_mlkit_entity_extraction)                            | [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/bharat-biradar/Google-Ml-Kit-plugin/tree/master/packages/google_mlkit_entity_extraction)          | ✅ | ✅ |
+### Face Detection
 
-## Requirements
+#### Create an instance of `InputImage`
 
-### iOS
+Create an instance of `InputImage` as explained [here](https://github.com/bharat-biradar/Google-Ml-Kit-plugin/tree/master/packages/google_mlkit_commons#creating-an-inputimage).
 
-- Minimum iOS Deployment Target: 10.0
-- Xcode 13 or newer
-- Swift 5
-- ML Kit only supports 64-bit architectures (x86_64 and arm64). Check this [list](https://developer.apple.com/support/required-device-capabilities/) to see if your device has the required device capabilities.
-
-Since ML Kit does not support 32-bit architectures (i386 and armv7), you need to exclude armv7 architectures in Xcode in order to run `flutter build ios` or `flutter build ipa`. More info [here](https://developers.google.com/ml-kit/migration/ios).
-
-Go to Project > Runner > Building Settings > Excluded Architectures > Any SDK > armv7
-
-![](https://github.com/bharat-biradar/Google-Ml-Kit-plugin/blob/master/resources/build_settings_01.png)
-
-Then your Podfile should look like this:
-
-```ruby
-# add this line:
-$iOSVersion = '10.0'
-
-post_install do |installer|
-  # add these lines:
-  installer.pods_project.build_configurations.each do |config|
-    config.build_settings["EXCLUDED_ARCHS[sdk=*]"] = "armv7"
-    config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = $iOSVersion
-  end
-  
-  installer.pods_project.targets.each do |target|
-    flutter_additional_ios_build_settings(target)
-    
-    # add these lines:
-    target.build_configurations.each do |config|
-      if Gem::Version.new($iOSVersion) > Gem::Version.new(config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'])
-        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = $iOSVersion
-      end
-    end
-    
-  end
-end
+```dart
+final InputImage inputImage;
 ```
 
-Notice that the minimum `IPHONEOS_DEPLOYMENT_TARGET` is 10.0, you can set it to something newer but not older.
+#### Create an instance of `FaceDetector`
 
-### Android
-
-- minSdkVersion: 21
-- targetSdkVersion: 31
-- compileSdkVersion: 31
-
-## Migrating from ML Kit for Firebase
-
-When Migrating from ML Kit for Firebase read [this guide](https://developers.google.com/ml-kit/migration). 
-
-For Android details read [this](https://developers.google.com/ml-kit/migration/android). 
-
-For iOS details read [this](https://developers.google.com/ml-kit/migration/ios).
-
-## Firebase dependency: Custom Models
-
-Google's standalone ML Kit library does have any direct dependency with Firebase. As designed by Google, you do not need to include Firebase in your project in order to use ML Kit. However, some ML Kit APIs have the possibility to be used with [Custom Models](https://developers.google.com/ml-kit/custom-models), that means that the default models can be replaced with custom TensorFlow Lite models.
-
-The plugins that allow Custom Models are:
-
-- [google\_mlkit\_image\_labeling](https://github.com/bharat-biradar/Google-Ml-Kit-plugin/tree/master/packages/google_mlkit_image_labeling)
-- [google\_mlkit\_object\_detection](https://github.com/bharat-biradar/Google-Ml-Kit-plugin/tree/master/packages/google_mlkit_object_detection)
-
-### iOS Additional Setup
-To use custom models hosted in firebase in iOS, you have to update your app's Podfile.
-
-First, include `GoogleMLKit/LinkFirebase` and `Firebase` in your Podfile:
-
-```ruby
-platform :ios, '10.0'
-
-...
-
-# Enable firebase-hosted models #
-pod 'GoogleMLKit/LinkFirebase'
-pod 'Firebase'
+```dart
+final options = FaceDetectorOptions();
+final faceDetector = FaceDetector(options: options);
 ```
 
-Next, add the preprocessor flag to enable the firebase remote models at compile time. To do that, update your existing `build_configurations` loop in the `post_install` step with the following:
+#### Process image
 
-```ruby
-post_install do |installer|
-  installer.pods_project.targets.each do |target|
-    ... # Here are some configurations automatically generated by flutter
+```dart
+final List<Face> faces = await faceDetector.processImage(inputImage);
 
-    target.build_configurations.each do |config|
-      # Enable firebase-hosted ML models
-      config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] ||= [
-        '$(inherited)',
-        'MLKIT_FIREBASE_MODELS=1',
-      ]
-    end
-  end
-end
+for (Face face in faces) {
+  final Rect boundingBox = face.boundingBox;
+
+  final double rotX = face.headEulerAngleX; // Head is tilted up and down rotX degrees
+  final double rotY = face.headEulerAngleY; // Head is rotated to the right rotY degrees
+  final double rotZ = face.headEulerAngleZ; // Head is tilted sideways rotZ degrees
+
+  // If landmark detection was enabled with FaceDetectorOptions (mouth, ears,
+  // eyes, cheeks, and nose available):
+  final FaceLandmark leftEar = face.landmarks[FaceLandmarkType.leftEar]!;
+  if (leftEar != null) {
+    final Point<double> leftEarPos = leftEar.position;
+  }
+
+  // If classification was enabled with FaceDetectorOptions:
+  if (face.smilingProbability != null) {
+    final double smileProb = face.smilingProbability;
+  }
+
+  // If face tracking was enabled with FaceDetectorOptions:
+  if (face.trackingId != null) {
+    final int id = face.trackingId;
+  }
+}
 ```
 
-To setup Firebase for your project check this links:
+#### Release resources with `close()`
 
-- [Add Firebase to your Android project](https://firebase.google.com/docs/android/setup)
-- [Add Firebase to your iOS project](https://firebase.google.com/docs/ios/setup)
-
-Also please note that in latest [versions](https://github.com/bharat-biradar/Google-Ml-Kit-plugin/blob/master/packages/google_ml_kit/CHANGELOG.md), [google\_ml\_kit](https://github.com/bharat-biradar/Google-Ml-Kit-plugin/tree/master/packages/google_ml_kit) has become an umbrella plugin including all the plugin listed in [Features](#features). For that reason you will need to configure Firebase in your project if using [google\_ml\_kit](https://github.com/bharat-biradar/Google-Ml-Kit-plugin/tree/master/packages/google_ml_kit). We recommend you start using the plugins listed in [Features](#features) rather than using [google\_ml\_kit](https://github.com/bharat-biradar/Google-Ml-Kit-plugin/tree/master/packages/google_ml_kit), otherwise you will be including unnecessary dependencies in your project.
+```dart
+faceDetector.close();
+```
 
 ## Example app
 
